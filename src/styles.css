@@ -1,0 +1,545 @@
+/* Ensure that the body and html take up the full height of the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+     /* background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20240920/pngtree-the-cross-on-mountain-top-with-a-sunset-sky-background-christian-image_16236302.jpg"); */
+    /* background-repeat: no-repeat; */
+     /* background-size: cover;   */
+    background-color: #ede3e3;
+
+}
+
+/* Full-page container for the component */
+.full-page {
+    position: relative;
+    height: 100vh; /* 100% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+    overflow: hidden;
+}
+
+/* Background video that covers the entire viewport */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area without distortion */
+  z-index: 0; /* Behind the content */
+  background-color: rgb(44, 35, 35);
+}
+
+
+/* Background image that covers the entire viewport */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    z-index: 0; /* Behind the content */
+}
+
+/* Dark overlay to darken the background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* In front of the image but behind the text */
+}
+
+/* Centered text */
+.centered-text {
+    position: relative;
+    z-index: 2; /* In front of the overlay */
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Align text in a column */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align text to the left */
+    height: 100%;
+    padding: 20px; /* Add some padding to the left */
+    top: 100px;
+}
+
+/* Responsive styling to limit text to 3 lines */
+.centered-text p {
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+
+/* Navigation bar styles */
+.navbar {
+    position: absolute; /* Position the navbar absolutely */
+    top: 0;
+    left: 65%; /* Ensure it aligns to the right */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    padding: 1rem; /* Add some padding */
+    z-index: 3; /* In front of everything */
+    font-size: 20px;
+}
+
+/* Logo style to position it in the top-left corner */
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 10px; /* Space from the top */
+    left: 10px; /* Space from the left */
+    height: 50px; /* Set a fixed height for the logo */
+    width: 10%; /* Maintain aspect ratio */
+    z-index: 2; /* Above the background but below the overlay */
+}
+
+/* Nav links styling */
+.nav-links {
+  display: flex; /* Display links in a row */
+  align-items: center; /* Center vertically */
+  /*background-color: #333; /* Dark background for the nav */
+  padding: 10px 20px; /* Padding around the nav */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 15px; /* Smaller font size */
+}
+
+.nav-links a {
+  margin-left: 10px; /* Space between nav links */
+  color: #f0f0f0; /* Light gray color */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 12px; /* Padding for clickable area */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.nav-links a:hover {
+  background-color: #555; /* Darker background on hover */
+  color: #fff; /* Change text color on hover */
+  border-radius: 3px; /* Slightly rounded corners on hover */
+}
+
+.video-container {
+  padding: 20px; /* Adds space around the video section */
+}
+
+.container {
+  max-width: 1200px; /* Limit the container width */
+  margin: auto; /* Center the container */
+  
+}
+
+.row {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between video columns */
+  margin-top: 20px; /* Adds space above the row */
+}
+
+.column {
+  flex: 1; /* Allows columns to grow equally */
+  margin-right: 20px; /* Space between columns */
+}
+
+.column:last-child {
+  margin-right: 0; /* Remove margin from the last column */
+}
+
+.video-wrapper {
+  margin-right: 15px; /* Add space between columns */
+}
+
+/* Optional: Remove margin from the last child to avoid extra space */
+.row .video-wrapper:last-child {
+  margin-right: 0;
+}
+
+.content-container {
+  padding: 20px; /* Adds space around the content section */
+  background-color: #FFFFFF;
+}
+
+.content-container .row {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between content columns */
+  margin-top: 20px; /* Adds space above the content row */
+}
+
+.content-container .column {
+  flex: 1; /* Allows columns to grow equally */
+  margin-right: 20px; /* Space between columns */
+}
+
+.content-container .column:last-child {
+  margin-right: 0; /* Remove margin from the last column */
+}
+
+.video-container h1{
+  text-align: center;
+}
+
+.content-container h1 {
+  text-align: center;
+}
+
+.vid{
+  margin-left: 35px;
+}
+
+
+
+/* Ensure rows are displayed horizontally */
+.row {
+  display: flex;
+  justify-content: space-around; /* Space between the videos */
+  align-items: center; /* Align videos vertically */
+  flex-wrap: wrap; /* Allow videos to wrap on smaller screens */
+}
+
+/* Ensure each column takes up an equal share of the width */
+.column {
+  flex: 1;
+  margin: 10px;
+  max-width: 98%; /* Adjust to ensure two columns fit in the same line */
+  text-align: center;
+}
+
+.video-wrapper {
+  max-width: 100%;
+}
+
+/* Ensure h2 and p within the column are aligned properly */
+.column h2 {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 1rem; /* Adjust the size as needed */
+}
+  
+  h2 {
+    color: #4caf50; /* Custom green color */
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  .logo-section {
+    text-align: center;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+  
+  }
+  .centered-titles{
+   
+    
+    text-align: center;
+    color: #333;
+
+  }
+  
+  .centered-title {
+    
+    text-align: center;
+    color: #333;
+    /* margin-bottom: 30px; */
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust space between logos */
+    margin-bottom: 40px;
+  }
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .demo-logo {
+    width: 200px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 5px; /* Reduce space between logo and text */
+  }
+  
+  .demo-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0; /* Remove any top margin if present */
+  }
+
+ /* Upcoming Events Section */
+.upcoming-events {
+  padding: 20px;
+  text-align: center; /* Center the title */
+  background-color: #393838;
+}
+
+.events-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  gap: 30px; /* Add space between the event items */
+  flex-wrap: wrap; /* Wrap the items if they exceed the container width */
+}
+
+/* Individual event item */
+.event-item {
+  text-align: center;
+  flex: 1 1 300px; /* Allow flexibility with a minimum width of 300px */
+}
+
+.event-image {
+  width: 100%; /* Set a fixed width for the event images */
+  height: 250px; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Add space between the image and text */
+  border-radius: 5px;
+}
+
+.event-text {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* hello */
+.footer {
+  background-color: #9d8282; /* Indigo background */
+  color: #F5F5F5; /* Light grey text */
+  padding: 20px 20px; /* Reduced vertical padding */
+ /* border-top: 5px solid #FFD700; /* Gold border */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left {
+  flex: 2;
+}
+
+.footer-left h1 {
+  font-size: 2em; /* Smaller header size */
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.footer-left p {
+  line-height: 1.4; /* Reduced line height for smaller text */
+  font-size: 0.9em; /* Smaller text size */
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right h2 {
+  font-size: 1.5em; /* Smaller section header size */
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.contact-info p {
+  margin: 5px 0; /* Slightly reduced margin */
+  font-size: 0.85em; /* Smaller text size for contact info */
+}
+
+.phone {
+  font-weight: bold;
+  color: #FFD700; /* Gold color for phone numbers */
+}
+
+.email {
+  color: #F5F5F5;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; /* Underline effect on hover */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.email:hover {
+  border-color: #FFD700; /* Change underline color on hover */
+}
+
+/* New styles for the contact details section */
+.footer-contact {
+  display: flex;
+  justify-content: center; /* Centering the contact details */
+  margin-top: 15px; /* Space between sections */
+}
+
+.footer-address {
+  text-align: right; /* Aligning address to the right */
+  margin-right: 20px; /* Spacing on the right */
+}
+
+.footer-email {
+  text-align: left; /* Aligning email to the left */
+  margin-left: 20px; /* Spacing on the left */
+}
+
+
+/* Banner section styling */
+/* Testimonies Section */
+.testimonies-section {
+  padding: 40px;
+  background-color: #f8f9fa;
+  width:100%;
+}
+
+.centered-title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  /* color: #6f2d91; Customize the color to match the design */
+}
+
+.testimonies-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.testimony-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.testimony-avatar {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimony-content {
+  text-align: center;
+}
+
+.testimony-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6f2d91;
+}
+
+.testimony-location {
+  font-size: 1rem;
+  color: gray;
+}
+
+.testimony-content h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6f2d91;
+}
+
+.testimony-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+/* button */
+
+.navigate-button {
+  background-color: #4f37d7; /* A nice green color */
+  color: white; /* Text color */
+  padding: 12px 24px; /*Padding for the button */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 200px;
+  margin-right: 0px;
+}
+
+.navigate-button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.navigate-button:active {
+  background-color: #388e3c; /* Even darker green when clicked */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on active */
+}
+
+/* upcomming prayer */
+
+.upcoming-prayer-meetings {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* or any background color you prefer */
+  border-radius: 8px;
+}
+
+.upcoming-prayer-meetings h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* adjust as necessary */
+}
+
+.view-all-button, .direction-button {
+  background-color: #929292; /* Adjust color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.meeting {
+  border-bottom: 1px solid #ccc; /* Adds a separator */
+  margin-bottom: 15px;
+  padding: 15px 0;
+}
+
+.meeting-date {
+  display: inline-block;
+  text-align: center;
+  background-color: #bab2e7; /* Adjust color */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.meeting-details {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.location-icon {
+  margin-right: 5px; /* Space between icon and text */
+}
+.month-image {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between image and content */
+}
