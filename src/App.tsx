@@ -4,6 +4,7 @@ import './styles.css';
 import logo from './jcc.png'; // Assuming logo is in local
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import chur from './vanagaram.jpg';
+import mag from './emag.png';
 import ut from './Uturn.png';
 import be from './beth.jpg';
 import l1 from './logo1.jpg';
@@ -19,7 +20,7 @@ const App: React.FC = () => {
       <div className="full-page">
         {/* Video background */}
         <video className="background-video" autoPlay loop muted>
-          <source src={`${process.env.PUBLIC_URL}/jesus3.mp4`} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/jesus2.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -325,6 +326,39 @@ const App: React.FC = () => {
       </div>
   </div>
 </motion.div>
+
+{/* emag */}
+
+{/* eMagazine Section */}
+<motion.div
+  className="magazine-section"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.5 }}
+>
+  <h2 className="magazine-title">eMagazine</h2>
+  <motion.div className="magazine-grid">
+    {[
+      { imgSrc: mag, link: 'link-to-magazine1' },
+      { imgSrc: mag, link: 'link-to-magazine2' },
+      { imgSrc: mag , link: 'link-to-magazine3' },
+      { imgSrc: mag, link: 'link-to-magazine4' },
+      { imgSrc: mag, link: 'link-to-magazine5' },
+      { imgSrc: mag, link: 'link-to-magazine6' },
+      { imgSrc: mag, link: 'link-to-magazine7' },
+    ].map((mag, index) => (
+      <motion.div key={index} className="magazine-item">
+        <img src={mag.imgSrc} alt={`Magazine ${index + 1}`} className="magazine-cover" />
+        <a href={mag.link} target="_blank" rel="noopener noreferrer" className="magazine-link">
+          {/* <img src="path-to-pdf-icon" alt="PDF Icon" className="pdf-icon" />
+          <span></span> */}
+        </a>
+      </motion.div>
+    ))}
+  </motion.div>
+</motion.div>
+
 
 
       {/* Footer */}
