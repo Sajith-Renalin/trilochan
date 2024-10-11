@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/trilochan/static/css/main.88cd2255.css",
-    "main.js": "/trilochan/static/js/main.cd9aa92f.js",
+    "main.css": "/trilochan/static/css/main.42954cf6.css",
+    "main.js": "/trilochan/static/js/main.cb186ecf.js",
     "static/js/453.40ffd671.chunk.js": "/trilochan/static/js/453.40ffd671.chunk.js",
     "static/media/church.jpg": "/trilochan/static/media/church.dec866cf0da6dda182f4.jpg",
     "static/media/Uturn.png": "/trilochan/static/media/Uturn.659705b63b0785620293.png",
@@ -9,15 +9,16 @@
     "static/media/logo4.jpg": "/trilochan/static/media/logo4.396f96010fceb735b588.jpg",
     "static/media/logo5.jpg": "/trilochan/static/media/logo5.12b456d498dab586f1fd.jpg",
     "static/media/logo1.jpg": "/trilochan/static/media/logo1.d07dfa65148dca188927.jpg",
+    "static/media/emag.png": "/trilochan/static/media/emag.f436a369619a792cc0c4.png",
     "static/media/logo2.jpg": "/trilochan/static/media/logo2.fbd3f2609f9f00ded9a1.jpg",
     "static/media/beth.jpg": "/trilochan/static/media/beth.c8bd566fb657c655a29c.jpg",
     "index.html": "/trilochan/index.html",
-    "main.88cd2255.css.map": "/trilochan/static/css/main.88cd2255.css.map",
-    "main.cd9aa92f.js.map": "/trilochan/static/js/main.cd9aa92f.js.map",
+    "main.42954cf6.css.map": "/trilochan/static/css/main.42954cf6.css.map",
+    "main.cb186ecf.js.map": "/trilochan/static/js/main.cb186ecf.js.map",
     "453.40ffd671.chunk.js.map": "/trilochan/static/js/453.40ffd671.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88cd2255.css",
-    "static/js/main.cd9aa92f.js"
+    "static/css/main.42954cf6.css",
+    "static/js/main.cb186ecf.js"
   ]
 }
