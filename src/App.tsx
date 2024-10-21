@@ -20,7 +20,7 @@ const App: React.FC = () => {
       <div className="full-page">
         {/* Video background */}
         <video className="background-video" autoPlay loop muted>
-          <source src={`${process.env.PUBLIC_URL}/jesus2.mp4`} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/jesus6.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -77,8 +77,8 @@ const App: React.FC = () => {
       <div className="video-wrapper">
         <div className='video'>
           <iframe
-            width="200"
-            height="150"
+            width="230"
+            height="180"
             src="https://www.youtube.com/embed/KDsWsAesfYs?si=8VDOHKWvAmKu9woC" // Updated to embed format
             title="October Promise"
             frameBorder="0"
@@ -92,8 +92,8 @@ const App: React.FC = () => {
       <div className="video-wrapper">
         <div className='video'>
           <iframe
-            width="200"
-            height="150"
+            width="230"
+            height="180"
             src="https://www.youtube.com/embed/KDsWsAesfYs?si=8VDOHKWvAmKu9woC"
             title="October Promise"
             frameBorder="0"
@@ -106,8 +106,8 @@ const App: React.FC = () => {
       <div className="video-wrapper">
         <div className='video'>
           <iframe
-            width="200"
-            height="150"
+            width="230"
+            height="180"
             src="https://www.youtube.com/embed/KDsWsAesfYs?si=8VDOHKWvAmKu9woC"
             title="October Promise"
             frameBorder="0"
@@ -120,8 +120,8 @@ const App: React.FC = () => {
       <div className="video-wrapper">
         <div className='video'>
           <iframe
-            width="200"
-            height="150"
+            width="230"
+            height="180"
             src="https://www.youtube.com/embed/KDsWsAesfYs?si=8VDOHKWvAmKu9woC"
             title="October Promise"
             frameBorder="0"
@@ -134,8 +134,8 @@ const App: React.FC = () => {
       <div className="video-wrapper">
         <div className='video'>
           <iframe
-            width="200"
-            height="150"
+            width="230"
+            height="180"
             src="https://www.youtube.com/embed/KDsWsAesfYs?si=8VDOHKWvAmKu9woC"
             title="October Promise"
             frameBorder="0"

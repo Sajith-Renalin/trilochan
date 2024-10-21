@@ -71,13 +71,13 @@ interface Plan {
           <p className="plan-description">{description}</p>
           <button className="read-more-button">Read More</button>
         </div>
-        <Link to="/">
+        <Link to="/trilochan">
             <motion.button
               className="navigate-button"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              MORE
+              Back
             </motion.button>
           </Link>
       </div>
